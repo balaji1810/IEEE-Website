@@ -3,11 +3,6 @@ body, html {
   margin: 0;
 }
 
-.red {
-  height: 200px;
-  width: 200px;
-}
-
 /* .navbar{
     position:fixed;
     width:100%;
@@ -57,7 +52,7 @@ body, html {
     margin-top: 0;
  }
 
-.topbg {
+.topsection {
   background-image: url('../images/ieee.jpg');
   height: 100%;
   background-position: center;
@@ -104,4 +99,122 @@ body, html {
   20% {
     transform: translateY(-20px)
   }
+}
+
+.features {
+  padding: 3.5rem 0 2rem 0 !important;
+  justify-content: center;
+  text-align: center;
+  padding: 0 5rem;
+  background-image: url('../images/stone.jpg');
+}
+
+.features .h1 {
+  font-size: 4rem;
+  font-weight: normal;
+}
+
+.about {
+  padding: 0 11rem 3rem;
+}
+
+.about h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.about p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.scroll {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: grey;
+}
+
+.scroller {
+  height: 1.2em;
+  line-height: 1.2em;
+  position: relative;
+  overflow: hidden;
+  width: 10em;
+  color: #0066ff;
+}
+.scroller > span {
+  position: relative;
+  text-align: center;
+  top: 0;
+  animation: slide 5s infinite;
+  font-weight: bold;
+
+}
+@keyframes slide {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -1.2em;
+  }
+  50% {
+    top: -2.4em;
+  }
+  75% {
+    top: -3.6em;
+  }
+}
+
+/* SOCIETIES */
+#societies {
+  padding: 2.5rem 5rem;
+  justify-content: center;
+  background-image: url('../images/background.jpg');
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.societies .head {
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+  color: #0066ff;
+  margin-bottom: 1vh;
+  text-align: center;
+}
+
+.soct {
+  justify-content: center;
+  text-align: center;
+  padding: 2.5rem 0;
+}
+
+.bighov {
+  transition: transform .75s;
+}
+
+.bighov:hover {
+  transform: scale(1.10);
+}
+
+.soct img {
+  width: 20%;
+  height: 20%;
+}
+
+.soct p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+hr {
+    margin: 0px auto 4vh;
+    width: 5rem;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    border-image: initial;
+    border-top: 3px solid rgb(56, 65, 88);
 }
