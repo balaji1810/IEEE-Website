@@ -5,42 +5,27 @@ body, html {
 
 canvas {
   position: absolute;
-    z-index: -1;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background: black;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: black;
 }
 
 canvas[resize] {
-    width: 100%;
-    height: 100%;
-}
-
-/* .navbar{
-    position:fixed;
-    width:100%;
-    z-index: 1000000;
-    top:0;
-    padding: 0;
-} */
-.navbar-light {
-  color: #000;
-}
-
-.bg-light {
-  background-color: #fff;
+  width: 100%;
+  height: 100%;
 }
 
 .navbar-brand {
-  font-size: 2.5rem;
-  font-family: "Ubuntu";
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .nav-item {
   padding: 0 18px;
+  text-align: center;
 }
 
 .nav-link {
@@ -66,11 +51,6 @@ canvas[resize] {
   color: blue;
 }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 0;
-}
-
 .topsection {
   height: 100%;
   position: relative;
@@ -80,6 +60,7 @@ canvas[resize] {
 .center {
   margin: 0;
   text-align: center;
+  color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -87,13 +68,11 @@ canvas[resize] {
 }
 
 .center span {
-  color: #fff;
   font-weight: 500;
   font-size: 10vw;
 }
 
 .center h2 {
-  color: #fff;
   font-size: 3vw;
 }
 
@@ -106,6 +85,7 @@ canvas[resize] {
   position: relative;
   display: inline-block;
   text-transform: uppercase;
+  font-size: 8.5vw;
   animation: waviy 2s infinite;
   animation-delay: calc(.1s * var(--i));
 }
@@ -124,7 +104,6 @@ canvas[resize] {
   padding: 3.5rem 0 2rem 0 !important;
   justify-content: center;
   text-align: center;
-  padding: 0 5rem;
   background-image: url('../images/stone.jpg');
 }
 
@@ -134,7 +113,7 @@ canvas[resize] {
 }
 
 .about {
-  padding: 0 11rem 3rem;
+  padding: 0 5rem 3rem;
 }
 
 .about h1 {
@@ -158,6 +137,7 @@ canvas[resize] {
 .scroller {
   height: 1.2em;
   line-height: 1.2em;
+  text-align: center;
   position: relative;
   overflow: hidden;
   width: 10em;
@@ -242,75 +222,7 @@ hr {
   border-top: 3px solid rgb(56, 65, 88);
 }
 
-/* mentor */
-.mentor-card {
-  position: relative;
-  width: 18.75rem;
-  height: 22rem;
-  background: #fff;
-  margin: 1rem auto;
-  border-radius: 4px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
-}
-
-.mentor-card .imgBx {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  bottom: 10px;
-  right: 10px;
-  background: #222;
-  transition: 0.5s;
-  z-index: 1;
-}
-
-.mentor-card:hover .imgBx {
-  bottom: 6.2rem;
-}
-
-.mentor-card .imgBx img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.mentor-card .details {
-  position: absolute;
-  left: 0.625rem;
-  right: 0.625rem;
-  bottom: 2.5rem;
-  height: 3.75rem;
-  text-align: center;
-}
-
-.mentor-card .details h2 {
-  margin: 0;
-  padding: 0;
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: #777;
-  text-transform: uppercase;
-}
-
-.mentor-card .details h2 span {
-  font-weight: 500;
-  font-size: 1rem;
-  color: #0066ff;
-  display: block;
-  margin-top: 0.313rem;
-}
-
 /* events */
-
-/* .events {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-} */
-
 .wrapper {
   display: flex;
   justify-content: space-around;
@@ -403,4 +315,216 @@ hr {
 .event-card .info button:hover {
   background: #0066ff;
   color: white;
+}
+
+/* mentor */
+.mentor-card {
+  position: relative;
+  width: 18.75rem;
+  height: 22rem;
+  background: #fff;
+  margin: 1rem auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+}
+
+.mentor-card .imgBx {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.mentor-card:hover .imgBx {
+  bottom: 6.2rem;
+}
+
+.mentor-card .imgBx img {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.mentor-card .details {
+  position: absolute;
+  left: 0.625rem;
+  right: 0.625rem;
+  bottom: 2.5rem;
+  height: 3.75rem;
+  text-align: center;
+}
+
+.mentor-card .details h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.mentor-card .details h2 span {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #0066ff;
+  display: block;
+  margin-top: 0.313rem;
+}
+
+/* footer */
+footer {
+  background-color: #0061a8;
+  color: white;
+  padding: 4rem 0 2rem 0;
+  text-align: center;
+}
+
+.fleft img {
+  width: auto;
+  height: 4rem;
+  margin-right: 5%;
+  margin-left: 2%;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+}
+
+.links li a {
+  text-decoration: none;
+  color: white;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 1rem;
+}
+
+.social-icon {
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon::before,
+.social-icon::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: .4s linear;
+}
+
+.social-icon:hover::before {
+  border-radius: 50%;
+  border-left: 4px solid;
+  border-right: 4px solid;
+  transform: skewX(20deg);
+  color: #fff;
+}
+
+.social-icon:hover::after {
+  border-radius: 50%;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  transform: skewY(-20deg);
+  color: #fff;
+}
+
+.social-icon a {
+  text-decoration: none;
+  color: white;
+  z-index: 1;
+}
+
+.social-icon svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0.625rem;
+  fill: white;
+  transition: .4s linear;
+}
+
+.social .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+}
+
+.social-icon:hover .tooltip {
+  top: -25px;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* media queries */
+@media (max-width: 900px) {
+  .soct img {
+    width: 30%;
+    height: 30%;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 0 2.5rem 3rem;
+  }
+
+  .soct img {
+    width: 40%;
+    height: 40%;
+  }
+
+  .backimg {
+    padding: 2.5rem 2.5rem;
+    justify-content: center;
+    background-image: url('../images/background.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 460px) {
+  .navbar-brand img {
+    width: auto;
+    height: 3rem;
+    margin-right: 5%;
+    margin-left: 2%;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .about {
+    padding: 0 2rem 3rem;
+  }
+
+  .soct img {
+    width: 50%;
+    height: 50%;
+  }
 }
